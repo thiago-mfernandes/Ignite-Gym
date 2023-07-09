@@ -9,6 +9,7 @@ module.exports = {
           '@dtos': './src/dtos',
           '@assets': './src/assets',
           '@components': './src/components',
+          '@theme': './src/theme',
           '@screens': './src/screens',
           '@storage': './src/storage',
           '@utils': './src/utils',

@@ -1,21 +1,17 @@
-import { StatusBar, Text, View } from "react-native";
+import { theme } from "./src/theme";
+import { NativeBaseProvider } from "native-base";
+import { StatusBar } from "react-native";
+import { SignIn } from "@screens/SignIn";
 
 export default function App() {
   return (
-    <View 
-      style={{ 
-        alignItems: 'center', 
-        justifyContent: "center", 
-        flex: 1,
-        backgroundColor: "#202024", 
-      }}
-    >
+    <NativeBaseProvider theme={theme}>
       <StatusBar 
         barStyle="light-content"
         backgroundColor="transparent"
         translucent
       />
-      <Text>Ignite Gym!</Text>
-    </View>
+      <SignIn />
+    </NativeBaseProvider>
   );
 }

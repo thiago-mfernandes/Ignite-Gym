@@ -4,7 +4,7 @@ import LogoSvg from "@assets/logo.svg";
 import { Input } from "@components/Input";
 import { Button } from "@components/Button";
 
-export function SignIn(){
+export function SignUp(){
   return (
     <ScrollView 
       contentContainerStyle={{ flexGrow: 1 }} //faz o container ocupar todo o espaco
@@ -30,8 +30,11 @@ export function SignIn(){
             mb={6}
             fontWeight="bold"
           >
-            Acesse sua conta
+            Crie sua conta
           </Heading>
+          <Input
+            placeholder="Nome"
+          />
           <Input
             placeholder="E-mail"
             keyboardType="email-address" //tipo do teclado
@@ -41,21 +44,13 @@ export function SignIn(){
             placeholder="Senha"
             secureTextEntry //indica que é um input de senha
           />
-          <Button title="Acessar" />
+          <Button title="Criar e acessar" />
         </Center>
-        <Center marginTop={24}>
-          <Text
-            color="gray.100"
-            fontSize="sm"
-            marginBottom={3}
-          >
-            Ainda não tem acesso?
-          </Text>
-          <Button
-            title="Criar conta"
-            variant="outline"
-          />
-        </Center>
+        <Button
+          title="Criar conta"
+          variant="outline"
+          marginTop={24}
+        />
       </VStack>
     </ScrollView>
   );

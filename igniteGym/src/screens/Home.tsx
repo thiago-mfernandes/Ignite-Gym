@@ -1,11 +1,11 @@
-import { Center, Text } from "native-base";
+import { HomeHeader } from "@components/HomeHeader";
+import { VStack } from "native-base";
 
 export function Home(){
   return (
-    <Center flex={1}>
-      <Text color="white">
-        Home
-      </Text>
-    </Center>
+    //esse elemento VStack vai colocar os itens um abaixo do outro
+    <VStack flex={1}>
+      <HomeHeader />
+    </VStack>
   );
 }

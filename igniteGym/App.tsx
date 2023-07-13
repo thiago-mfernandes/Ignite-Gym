@@ -1,7 +1,7 @@
 import { theme } from "./src/theme";
 import { NativeBaseProvider } from "native-base";
 import { StatusBar } from "react-native";
-import { SignUp } from "@screens/SignUp";
+import { Routes } from "@routes/index";
 
 export default function App() {
   return (
@@ -11,7 +11,7 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      <SignUp />
+      <Routes />
     </NativeBaseProvider>
   );
 }

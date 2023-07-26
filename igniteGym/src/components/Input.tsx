@@ -19,7 +19,6 @@ export function Input({...rest}: IInputProps){
         borderWidth: 1,
         borderColor: "green.500"
       }}
-
       {...rest}
     />
   );

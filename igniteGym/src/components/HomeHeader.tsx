@@ -1,5 +1,7 @@
-import { Heading, Text, HStack, VStack } from "native-base";
+import { Heading, Text, HStack, VStack, Icon } from "native-base";
+import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import { UserPhoto } from "./UserPhoto";
+import { TouchableOpacity } from "react-native";
 
 export function HomeHeader() {
   return (
@@ -16,14 +18,24 @@ export function HomeHeader() {
         alt="Imagem do Usuário"
         marginRight={4}
       />
-      <VStack>
+      <VStack flex={1}/**esse flex 1 empurra o icone para a esquerda */>
         <Text color="gray.100" fontSize="md">
           Olá,
         </Text>
         <Heading color="gray.100" fontSize="md">
-          Thiago
+          Thiago Fernandes
         </Heading>
       </VStack>
+
+      <TouchableOpacity>
+        <Icon 
+          as={MaterialIcons}
+          name="logout" 
+          size={7}  
+          color="gray.200"
+          style={{ marginRight:20}} 
+        />
+      </TouchableOpacity>
     </HStack>
   );
 }
